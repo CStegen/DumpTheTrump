@@ -1,29 +1,7 @@
 //Made by Carin Stegen carin.stegen@hyperisland.se*/
-// JavaScript code goes here
-    /*var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    var img = new Image();
-    img.src = 'Angry_trump_small.png';
-    var x = canvas.width/2;
-    var y = canvas.height/2;
-    var imgHeight = 50;
-    var imgWidth = 102; //Till hit ha med i början
-    var dx = 2;
-    var dy = -3;
-    var paddleHeight = 10;
-    var paddleWidth = 75;
-    var paddleX = (canvas.width-paddleWidth)/2;
-    var rightPressed = false;
-    var leftPressed = false;
-    var goalWidth = 60;
-    var goal = (canvas.width-goalWidth)/2;
-    var score = 0;
-    var hasScored = false;
-    var lives = 3;
-    var gameOverState = true;*/
 
-    var canvas, ctx, img, x, y, imgHeight, imgWidth, dx, dy,
-        paddleHeight, paddleWidth, paddleX, rightPressed, leftPressed, goalWidth, goal, score, hasScored, lives, gameOverState;
+var canvas, ctx, img, x, y, imgHeight, imgWidth, dx, dy,
+    paddleHeight, paddleWidth, paddleX, rightPressed, leftPressed,       goalWidth, goal, score, hasScored, lives, gameOverState, intervalID;
     img = new Image();
 
 //Initializing the game with all it contents
@@ -39,7 +17,7 @@ function initGame() {
     imgHeight = 50;
     imgWidth = 102;
     dx = 2;
-    dy = -3;
+    dy = -2;
     paddleHeight = 10;
     paddleWidth = 75;
     paddleX = (canvas.width-paddleWidth)/2;
@@ -51,7 +29,7 @@ function initGame() {
     hasScored = false;
     lives = 3;
     gameOverState = false;
-    setInterval(draw, 10);
+   
 }
 
 //Controls the paddle in the game with keypads and mousehandler
@@ -113,6 +91,12 @@ function drawPaddle() {
 
  // Here comes the function which controls the actual game elements
 
+function interval() {
+     setInterval(draw, 10);
+    
+}
+
+
 function draw() {
     // drawing code
 
@@ -165,6 +149,7 @@ if(!lives) {
     x = (canvas.width - imgHeight) / 2 ;
     y = (canvas.height - imgWidth) / 2;
     document.getElementById("restart").className = "";
+    
 }
 else {
     setTimeout(function() { gameOverState = false;
@@ -174,7 +159,7 @@ else {
     dx = 2;
     dy = -3;
     img.src = 'Graphics/Angry_trump_small.png';
-}, 1000)};
+}, 2000)};
 
     }
 
@@ -189,4 +174,6 @@ else {
     
     x += dx;
     y += dy;
+    
 }
+ setInterval(draw, 10);
