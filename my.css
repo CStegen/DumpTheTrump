@@ -1,0 +1,50 @@
+/* Made by Carin Stegen carin.stegen@hyperisland.se*/
+
+body {
+ background-color: #cccdca;
+    
+}
+
+.banner {
+        display: block;
+        margin: auto;
+        position: relative;
+        padding-bottom: 4px;
+}
+
+canvas { 
+        background-image: url("Graphics/bkg_game_final-01.png"); 
+        display: block; 
+        margin:  auto; 
+        position: static;
+        border: 15pt #eee solid;
+        border-radius: 15pt;
+}
+
+
+/* Buttons on the page */
+
+input {
+        display: block;
+        margin: -80pt auto;
+        width: 400px;
+        height: 64px;
+        background: #e61b23;
+        color: white;
+        font-size: 36pt;
+        font-family: "Helvetica";
+        position: relative;
+        -moz-box-shadow:    inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow:         inset 0 0 10px #000000;
+}
+
+
+        
+.hidden {
+        display: none;
+        
+}
+.lives {
+    color: #000000;
+}
