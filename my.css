@@ -17,7 +17,7 @@ canvas {
         display: block; 
         margin:  auto; 
         position: static;
-        border: 15pt #eee solid;
+        border: 15pt #000000 solid;
         border-radius: 15pt;
 }
 
